@@ -1,11 +1,11 @@
-      *****************************************************************
-      * COPYBOOK: CPERROR                                            *
-      *****************************************************************
-      * ESTRUCTURA COMPARTIDA PARA MANEJO CENTRALIZADO DE ERRORES    *
-      * USO: INCLUIR EN WS DEL PGM LLAMADOR Y EN LINKAGE DE PGMERROR *
-      *****************************************************************
-      * AUTOR: MARCET EDUARDO                      FECHA: 2026       *
-      *****************************************************************
+      ******************************************************************
+      * COPYBOOK: CPERROR                                              *
+      ******************************************************************
+      * ESTRUCTURA COMPARTIDA PARA MANEJO CENTRALIZADO DE ERRORES      *
+      * USO: INCLUIR EN WS DEL PGM LLAMADOR Y EN LINKAGE DE PGMERROR   *
+      ******************************************************************
+      * AUTOR: MARCET EDUARDO                      FECHA: 2026         *
+      ******************************************************************
 
        01 WS-ERROR.
         05 WS-ERR-PROGRAMA     PIC X(08) VALUE SPACES.

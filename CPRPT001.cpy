@@ -13,8 +13,8 @@
       * RPT-BORDE-ASTERISCO                                            *
       *----------------------------------------------------------------*
        01 RPT-BORDE-ASTERISCO.
-          05 FILLER               PIC X(80)    VALUE ALL '*'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER             PIC X(80)    VALUE ALL '*'.
+          05 FILLER             PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-TITULO                                                     *
@@ -29,25 +29,25 @@
       * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-TITULO.
-          05 FILLER               PIC X        VALUE '*'.
-          05 FILLER               PIC X(36)    VALUE
+          05 FILLER             PIC X        VALUE '*'.
+          05 FILLER             PIC X(36)    VALUE
              'REPORTE EMPLEADOS POR DEPTO Y SEXO  '.
-          05 FILLER               PIC X(9)     VALUE '  FECHA: '.
-          05 RPT-TIT-FECHA        PIC X(10)    VALUE SPACES.
-          05 FILLER               PIC X(8)     VALUE ' PAGINA:'.
-          05 RPT-TIT-PAGINA       PIC ZZZ9     VALUE ZEROS.
-          05 FILLER               PIC X(10)    VALUE SPACES.
-          05 FILLER               PIC X        VALUE '*'.
-          05 FILLER               PIC X(52)    VALUE SPACES.    
+          05 FILLER             PIC X(9)     VALUE '  FECHA: '.
+          05 RPT-TIT-FECHA      PIC X(10)    VALUE SPACES.
+          05 FILLER             PIC X(8)     VALUE ' PAGINA:'.
+          05 RPT-TIT-PAGINA     PIC ZZ9      VALUE ZEROS.
+          05 FILLER             PIC X(11)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '*'.
+          05 FILLER             PIC X(52)    VALUE SPACES.    
  
       *----------------------------------------------------------------*
       * RPT-BORDE-GUION  -  Pos 1 |, 2-79 guiones, 80 |, 81-132 esp.   *
       *----------------------------------------------------------------*
        01 RPT-BORDE-GUION.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(78)    VALUE ALL '-'.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(78)    VALUE ALL '-'.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-CAB-DEPT                                                   *
@@ -61,37 +61,31 @@
       * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-CAB-DEPT.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(15)    VALUE ' DEPARTAMENTO: '.
-          05 RPT-CDP-DEPTNO       PIC X(3)     VALUE SPACES.
-          05 FILLER               PIC X(3)     VALUE ' - '.
-          05 RPT-CDP-DEPTNAME     PIC X(36)    VALUE SPACES.
-          05 FILLER               PIC X(21)    VALUE SPACES.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(15)    VALUE ' DEPARTAMENTO: '.
+          05 RPT-CDP-DEPTNO     PIC X(3)     VALUE SPACES.
+          05 FILLER             PIC X(3)     VALUE ' - '.
+          05 RPT-CDP-DEPTNAME   PIC X(36)    VALUE SPACES.
+          05 FILLER             PIC X(21)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(52)    VALUE SPACES.
    
       *----------------------------------------------------------------*
       * RPT-CAB-SEXO                                                   *
       * Pos 001     |                                          (1)     *
       * Pos 002-009 SEXO:                                      (8)     *
-      * Pos 010-010 Codigo M/F                                 (1)     *
-      * Pos 011-012  (                                         (2)     *
       * Pos 013-021 MASCULINO/FEMENINO                         (9)     *
-      * Pos 022-022 )                                          (1)     *
       * Pos 023-079 Espacios                                  (57)     *
       * Pos 080     |                                          (1)     *
       * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-CAB-SEXO.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(8)     VALUE '  SEXO: '.
-          05 RPT-CSX-SEXO         PIC X        VALUE SPACES.
-          05 FILLER               PIC X(2)     VALUE ' ('.
-          05 RPT-CSX-DESC-SEXO    PIC X(9)     VALUE SPACES. 
-          05 FILLER               PIC X        VALUE ')'.
-          05 FILLER               PIC X(57)    VALUE SPACES.
-          05 FILLER               PIC X        VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(8)     VALUE '  SEXO: '.
+          05 RPT-CSX-DESC-SEXO  PIC X(9)     VALUE SPACES.
+          05 FILLER             PIC X(61)    VALUE SPACES.
+          05 FILLER             PIC X        VALUE '|'.
+          05 FILLER             PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-COLUMNAS                                                   *
@@ -105,29 +99,30 @@
       * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-COLUMNAS.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(8)     VALUE '  EMPNO '.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(8)     VALUE '  NOMBRE'.
-          05 FILLER               PIC X(34)    VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(15)    VALUE '        SALARIO'.
-          05 FILLER               PIC X(11)    VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(8)     VALUE '  EMPNO '.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(8)     VALUE '  NOMBRE'.
+          05 FILLER            PIC X(34)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(8)     VALUE SPACES.
+          05 FILLER            PIC X(7)     VALUE 'SALARIO'.
+          05 FILLER            PIC X(11)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-SEPARADOR-COL                                              *
       *----------------------------------------------------------------*
        01 RPT-SEPARADOR-COL.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(8)     VALUE ALL '-'.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(42)    VALUE ALL '-'.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(26)    VALUE ALL '-'.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(8)     VALUE ALL '-'.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(42)    VALUE ALL '-'.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(26)    VALUE ALL '-'.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-DETALLE                                                    *
@@ -141,47 +136,51 @@
       * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-DETALLE.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 RPT-DET-EMPNO        PIC X(8)     VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 RPT-DET-NOMBRE       PIC X(42)    VALUE SPACES. 
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 RPT-DET-SALARIO      PIC X(26)    VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 RPT-DET-EMPNO     PIC X(8)     VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 RPT-DET-NOMBRE    PIC X(12)    VALUE SPACES.
+          05 FILLER            PIC X(1)     VALUE SPACES. 
+          05 RPT-DET-APELLIDO  PIC X(31)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 RPT-DET-SALARIO   PIC $ZZZ.ZZ9,99 VALUE ZEROS.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-BORDE-IGUAL  -  Pos 1 |, 2-79 iguales, 80 |, 81-132 esp.   *
       *----------------------------------------------------------------*
        01 RPT-BORDE-IGUAL.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(78)    VALUE ALL '='.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(78)    VALUE ALL '='.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-SUBTOTAL-SEXO                                              *
       * Pos 001     |                                          (1)     *
-      * Pos 002-019  SUBTOTAL SEXO: X                         (18)     *
+      * Pos 002-017  SUBTOTAL SEXO: X                         (16)     *
       * Pos 020-029  CANTIDAD:                                (10)     *
-      * Pos 030-033  ZZZ9                                     (4)      *
-      * Pos 034-039  PROM:                                    (6)      *
-      * Pos 040-051  $ZZZ.ZZZ,99                             (12)      *
-      * Pos 052-079 Espacios                                 (28)      *
+      * Pos 030-033  ZZZ9                                      (4)     *
+      * Pos 034-039  SALARIO PROMEDIO:                         (6)     *
+      * Pos 040-051  $ZZZ.ZZZ,99                              (12)     *
+      * Pos 052-079 Espacios                                  (11)     *
       * Pos 080     |                                          (1)     *
-      * Pos 081-132 Espacios                                 (52)      *
+      * Pos 081-132 Espacios                                  (52)     *
       *----------------------------------------------------------------*
        01 RPT-SUBTOTAL-SEXO.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(16)    VALUE '  SUBTOTAL SEXO:'.
-          05 RPT-SSX-SEXO         PIC X(2)     VALUE SPACES. 
-          05 FILLER               PIC X(11)    VALUE '  CANTIDAD:'.
-          05 RPT-SSX-CANTIDAD     PIC ZZZ9     VALUE SPACES. 
-          05 FILLER               PIC X(7)     VALUE '  PROM:'.
-          05 RPT-SSX-PROMEDIO     PIC X(12)    VALUE SPACES.
-          05 FILLER               PIC X(27)    VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(16)    VALUE ' SUBTOTAL SEXO: '.
+          05 RPT-SSX-SEXO      PIC X        VALUE SPACES. 
+          05 FILLER            PIC X(13)    VALUE '   CANTIDAD: '.
+          05 RPT-SSX-CANTIDAD  PIC ZZZ9     VALUE SPACES.
+          05 FILLER            PIC X(4)     VALUE SPACES. 
+          05 FILLER            PIC X(17)    VALUE 'SALARIO PROMEDIO:'.
+          05 FILLER            PIC X        VALUE SPACES.      
+          05 RPT-SSX-PROMEDIO  PIC $ZZZ.ZZ9,99 VALUE ZEROS.
+          05 FILLER            PIC X(12)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-TOTAL-DEPT                                                 *
@@ -196,16 +195,17 @@
       * Pos 081-132 Espacios                                 (52)      *
       *----------------------------------------------------------------*
        01 RPT-TOTAL-DEPT.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(14)    VALUE '  TOTAL DEPTO:'.
-          05 RPT-TDP-DEPTNO       PIC X(4)     VALUE SPACES.
-          05 FILLER               PIC X(11)    VALUE '  CANTIDAD:'.
-          05 RPT-TDP-CANTIDAD     PIC ZZZ9     VALUE ZEROS.
-          05 FILLER               PIC X(7)     VALUE '  PROM:'.
-          05 RPT-TDP-PROMEDIO     PIC X(12)    VALUE SPACES.
-          05 FILLER               PIC X(29)    VALUE SPACES.
-          05 FILLER               PIC X(1)     VALUE '|'.
-          05 FILLER               PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(13)    VALUE ' TOTAL DPTO: '.
+          05 RPT-TDP-DEPTNO    PIC X(4)     VALUE SPACES.
+          05 FILLER            PIC X(13)    VALUE '   CANTIDAD: '.
+          05 RPT-TDP-CANTIDAD  PIC ZZZ9     VALUE ZEROS.
+          05 FILLER            PIC X(4)     VALUE SPACES.
+          05 FILLER            PIC X(17)    VALUE 'SALARIO PROMEDIO:'.
+          05 RPT-TDP-PROMEDIO  PIC $ZZZ.ZZ9,99 VALUE ZEROS.
+          05 FILLER            PIC X(12)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-TOTAL-GRAL                                                 *
@@ -220,27 +220,22 @@
       * Pos 081-132 Espacios                                 (52)      *
       *----------------------------------------------------------------*
        01 RPT-TOTAL-GRAL.
-          05 FILLER             PIC X(1)     VALUE '*'.
-          05 FILLER             PIC X(16)    VALUE '  TOTAL GENERAL:'.
-          05 FILLER             PIC X(11)    VALUE '  CANTIDAD:'.
-          05 RPT-TGR-CANTIDAD   PIC ZZZ9     VALUE ZEROS.
-          05 FILLER             PIC X(7)     VALUE '  PROM:'.
-          05 RPT-TGR-PROMEDIO   PIC X(12)    VALUE SPACES.
-          05 FILLER             PIC X(29)    VALUE SPACES.
-          05 FILLER             PIC X(1)     VALUE '*'.
-          05 FILLER             PIC X(52)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '*'.
+          05 FILLER            PIC X(17)    VALUE '  TOTAL GENERAL: '.
+          05 FILLER            PIC X(13)    VALUE '   CANTIDAD: '.
+          05 RPT-TGR-CANTIDAD  PIC ZZZ9     VALUE ZEROS.
+          05 FILLER            PIC X(17)    VALUE 'SALARIO PROMEDIO:'.
+          05 RPT-TGR-PROMEDIO  PIC $ZZZ.ZZ9,99 VALUE ZEROS.
+          05 FILLER            PIC X(12)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '*'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
 
       *----------------------------------------------------------------*
       * RPT-LINEA-BLANCA                                               *
       *----------------------------------------------------------------*
        01 RPT-LINEA-BLANCA.
-          05 FILLER             PIC X(132)   VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(78)    VALUE SPACES.
+          05 FILLER            PIC X        VALUE '|'.
+          05 FILLER            PIC X(52)    VALUE SPACES.
       
-      *----------------------------------------------------------------*
-      * MASCARAS DE EDICION                                            *
-      *----------------------------------------------------------------*
-       01 RPT-MASCARAS-DE-EDICION. 
-          05 RPT-MSK-SALARIO   PIC $ZZZ.ZZZ,99 VALUE ZEROS.
-          05 RPT-MSK-PROMEDIO  PIC $ZZZ.ZZZ,99 VALUE ZEROS.
-          05 RPT-MSK-CANTIDAD  PIC ZZZ9        VALUE ZEROS.
-          05 RPT-MSK-PAGINA    PIC ZZZ9        VALUE ZEROS.

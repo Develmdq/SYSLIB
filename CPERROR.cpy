@@ -2,7 +2,6 @@
       * COPYBOOK: CPERROR                                              *
       ******************************************************************
       * ESTRUCTURA COMPARTIDA PARA MANEJO CENTRALIZADO DE ERRORES      *
-      * USO: INCLUIR EN WS DEL PGM LLAMADOR Y EN LINKAGE DE PGMERROR   *
       ******************************************************************
       * AUTOR: MARCET EDUARDO                      FECHA: 2026         *
       ******************************************************************
